@@ -237,7 +237,7 @@ def acc_and_f1(preds, labels):
 
 def compute_metrics(task_name, preds, labels):
     assert len(preds) == len(labels)
-    return {"acc": simple_accuracy(preds, labels)}
+    return {"acc_and_f1": acc_and_f1(preds, labels)}
 
 output_modes = {
     "MyProcessor": "classification",
